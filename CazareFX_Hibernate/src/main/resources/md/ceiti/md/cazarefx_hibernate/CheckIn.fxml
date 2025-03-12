@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.input.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="md.ceiti.md.cazarefx_hibernate.view.Camere.CameraController">
+    <Region prefHeight="10" />
+
+    <!-- Form for inputting reservation details -->
+    <VBox spacing="10">
+        <HBox spacing="10">
+            <Label text="Client Name:" />
+            <TextField fx:id="clientNameField" promptText="Enter client name" prefWidth="200"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Room Number:" />
+            <TextField fx:id="roomNumberField" promptText="Enter room number" prefWidth="200"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Check-in Date:" />
+            <DatePicker fx:id="checkInDate" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Check-out Date:" />
+            <DatePicker fx:id="checkOutDate" />
+        </HBox>
+
+        <Button fx:id="submitButton" text="Submit" onAction="#handleSubmitAction" />
+    </VBox>
+
+    <Region prefHeight="10" />
+
+    <!-- Horizontal box with search field and Go button -->
+    <HBox spacing="10">
+        <TextField fx:id="searchField" prefHeight="26.0" prefWidth="214.0" promptText="Search..." />
+    </HBox>
+
+    <Region prefHeight="10" />
+
+    <TableView fx:id="cameraTable"  VBox.vgrow="ALWAYS">
+        <columns>
+
+            <TableColumn fx:id="numeColumn" text="Name" />
+            <TableColumn fx:id="tipcameraColumn" text="TipCamera" />
+            <TableColumn fx:id="statutColumn" text="Statut" />
+            <TableColumn fx:id="stareaColumn" text="Starea" />
+            <TableColumn fx:id="pretColumn" text="Pret" />
+        </columns>
+    </TableView>
+</VBox>

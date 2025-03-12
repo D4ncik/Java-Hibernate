@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="md.ceiti.md.cazarefx_hibernate.view.TipCamera.TipCameraController">
+    <Region prefHeight="10" />
+    <HBox spacing="10">
+        <TextField fx:id="searchField" prefHeight="26.0" prefWidth="214.0" promptText="Search..." />
+    </HBox>
+    <Region prefHeight="10" />
+    <TableView fx:id="tipcameraTable">
+        <columns>
+            <TableColumn fx:id="numeColumn" text="Name" />
+            <TableColumn fx:id="descriereColumn" text="Descriere" />
+            <TableColumn fx:id="nrcamereColumn" text="Nr Camera" />
+            <TableColumn fx:id="ocupateColumn" text="Ocupata" />
+            <TableColumn fx:id="disponibileColumn" text="Disponibila" />
+        </columns>
+    </TableView>
+</VBox>

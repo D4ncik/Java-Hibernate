@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="md.ceiti.md.cazarefx_hibernate.view.Camere.AddCamera"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" spacing="10.0" prefWidth="100.0" prefHeight="400.0"
+          AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="200" AnchorPane.topAnchor="50" AnchorPane.bottomAnchor="50">
+        <TextField fx:id="nameField" layoutX="120.0" layoutY="80.0" promptText="Name" />
+
+        <!-- ComboBox for Tip Camera -->
+        <ComboBox fx:id="tipcameraComboBox" layoutX="120.0" layoutY="120.0" promptText="Tip Camera">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Duo" />
+                    <String fx:value="Solo" />
+                    <String fx:value="Familie" />
+                    <String fx:value="Cuplu" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <!-- ComboBox for Statut -->
+        <ComboBox fx:id="statutComboBox" layoutX="120.0" layoutY="160.0" promptText="Statut">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Good" />
+                    <String fx:value="Very Good" />
+                    <String fx:value="VIP" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <!-- ComboBox for Starea -->
+        <ComboBox fx:id="stareaComboBox" layoutX="120.0" layoutY="200.0" promptText="Starea">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Disponibila" />
+                    <String fx:value="Indisponibila" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <TextField fx:id="pretField" layoutX="120.0" layoutY="240.0" promptText="Pret" />
+
+        <Button fx:id="addButton" layoutX="120.0" layoutY="280.0" text="Add Camera" onAction="#handleAddCamera" />
+    </VBox>
+</AnchorPane>

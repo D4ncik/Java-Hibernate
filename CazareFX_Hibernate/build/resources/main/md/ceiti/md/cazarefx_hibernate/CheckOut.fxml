@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="md.ceiti.md.cazarefx_hibernate.view.Cazari.CazariController">
+    <Region prefHeight="10" />
+    <HBox spacing="10">
+        <TextField fx:id="searchField" prefHeight="26.0" prefWidth="214.0" promptText="Search..." />
+    </HBox>
+    <Region prefHeight="10" />
+    <TableView fx:id="cazariTable">
+        <columns>
+            <TableColumn fx:id="clientColumn" text="Client" />
+            <TableColumn fx:id="cameraColumn" text="Camera" />
+            <TableColumn fx:id="Nr_CameraColumn" text="Nr Camera" />
+            <TableColumn fx:id="statutColumn" text="Statut" />
+            <TableColumn fx:id="datainColumn" text="Data in" />
+            <TableColumn fx:id="dataoutColumn" text="Data out" />
+            <TableColumn fx:id="pretColumn" text="Pret" />
+            <TableColumn fx:id="zileColumn" text="Zile" />
+        </columns>
+    </TableView>
+    <Region prefHeight="10" />
+    <HBox spacing="10" alignment="CENTER">
+        <Region prefHeight="10" />
+        <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete" />
+        <Region prefHeight="10" />
+    </HBox>
+</VBox>
